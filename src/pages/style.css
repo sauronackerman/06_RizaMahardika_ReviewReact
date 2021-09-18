@@ -1,0 +1,378 @@
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  overflow-x: hidden;
+
+  padding: 0;
+}
+
+/* Style untuk halaman 1 */
+
+.bg-image {
+  background-image: url("./img/bg-img.png");
+  /* background-size: 100% 100%; */
+  height: 100vh;
+  width: 100vw;
+  background-size: cover !important;
+  background-repeat: repeat-y;
+  background-position: center center;
+  background-attachment: scroll;
+  overflow-x: hidden;
+}
+
+.image-home {
+  margin: 114px 35px 0 98px;
+}
+.text-home {
+  padding: 36px 0 0 0;
+  margin-top: 114px;
+  margin-left: 13px !important;
+}
+.img-logo {
+  margin: 10px 98px !important;
+  max-width: 100.75px;
+  height: auto;
+}
+
+nav {
+  font-size: 13px;
+  padding: 29px 0px 26px 40px !important;
+}
+
+.contact-costum {
+  margin-right: 98px !important;
+}
+.home-text-color {
+  color: #f47522;
+}
+
+.home-text-color:hover {
+  color: #2284f4;
+}
+.text-color-nav1 {
+  color: #f47522;
+}
+.text-color-nav2 {
+  color: #19345e;
+}
+
+.btn-costum {
+  background-color: #f47522 !important;
+  border: none !important;
+  color: white;
+  font-weight: 400;
+  font-size: 16px !important;
+  padding: 10px 28px !important;
+  margin-top: 10px !important;
+}
+
+.btn-costum:hover {
+  color: #19345e !important;
+}
+
+p {
+  color: #19345e;
+  padding: 0;
+}
+.p1 {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: -15px;
+}
+
+.p2 {
+  font-size: 85px;
+  font-weight: 700;
+  text-align: justify;
+  margin-bottom: -5px;
+}
+
+.p3 {
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 41px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+/* style khusus laman kontak */
+.bg-image-2 {
+  background-image: linear-gradient(#19345ea6, #19345ea6),
+    url("./img/charles-rRWiVQzLm7k-unsplash.jpg");
+  width: 468px;
+  height: 702px;
+  background-size: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.submitin {
+  text-decoration: none !important;
+  color: white !important;
+}
+
+.contact-box {
+  margin: 80px 95px 90px 110px;
+  padding-left: 0;
+}
+.logo-alterra-contact {
+  width: 275px;
+  height: 142px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 252px;
+  display: block;
+  opacity: 65%;
+}
+
+.contact-box > p {
+  font-size: 28px;
+}
+label {
+  color: #19345e;
+  font-size: 20px;
+}
+.contact-box > button {
+  font-size: 16px;
+  padding: 10px 17.68px !important;
+}
+
+/* untuk file review */
+.body-review {
+  background: linear-gradient(transparent 70vh, #edf6ff 30vh) fixed !important;
+  /* background-size: cover !important; */
+  line-height: 1;
+}
+
+.button-home-review {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  background-color: #f47522;
+  border-radius: 40px;
+  padding: 10px 30px;
+  border: none;
+}
+.button-home-review:hover {
+  color: #000;
+}
+
+.review {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ccd7eb;
+  border-radius: 10px;
+  background-color: white;
+  padding: 45px 49px;
+  /* display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap; */
+}
+
+.container-review {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-items: center;
+}
+.borderform {
+  width: 664px;
+  height: 490px;
+  margin-left: auto;
+}
+.img-box {
+  background-image: url("./img/img-dot@2x.png");
+  background-repeat: no-repeat;
+  background-size: 105px 85px;
+  background-position: bottom left;
+  width: 715px;
+  height: 508px;
+  margin: 6%;
+}
+
+.for-form {
+  margin-bottom: 15px;
+}
+
+.transf {
+  text-transform: capitalize;
+}
+tr > td {
+  padding-bottom: 7px !important;
+}
+.td-t {
+  width: 55% !important;
+}
+.sapaan {
+  position: relative;
+  font-style: italic;
+  margin-top: 25px;
+}
+.sapaan::after {
+  content: "";
+  position: absolute;
+  bottom: -76px;
+  left: 25%;
+  width: 50%;
+  border-bottom: 1px solid #ccd7eb;
+}
+.back-home {
+  margin: 99px 165px 0px 0px;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  color: #19345e;
+}
+.for-form,
+.sapaan {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #19345e;
+}
+
+.back-home > p {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  margin-bottom: 17px;
+  color: #19345e;
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/* html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+} */
+/* HTML5 display-role reset for older browsers */
+/* article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+} */
+
+/* ol,
+ul {
+  list-style: none;
+} */
+/* blockquote,
+q {
+  quotes: none;
+} */
+/* blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+} */
+/* table {
+  border-collapse: collapse;
+  border-spacing: 0;
+} */
