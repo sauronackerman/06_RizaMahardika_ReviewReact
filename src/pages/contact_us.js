@@ -3,8 +3,11 @@ import "./style.css";
 import logo from "./img/logo-ALTA-v2.png";
 import validator from "validator";
 import { useHistory } from "react-router";
-
+import { useDispatch } from "react-redux";
+import { submit } from "../redux/reducers/user";
 const Contact = (props) => {
+  const dispatch = useDispatch();
+  // initial data
   const dataKosong = {
     nama: "",
     email: "",
@@ -19,11 +22,12 @@ const Contact = (props) => {
   const [errPhone, setErrPhone] = useState("");
   const [errNat, setErrnat] = useState("");
 
+  // * -----handle input--------
   const handleInput = (e) => {
     const name = e.target.name;
     const value = e.target.value;
 
-    // jika ada yang mudah kenapa bikin yang susah? wkwk
+    //  form react-validator
     if (name === "nama")
       validator.isAlpha(value) && value !== ""
         ? setErrName("")
@@ -49,6 +53,7 @@ const Contact = (props) => {
       [name]: value,
     });
   };
+  // * -----Akhir handle input-------------
 
   const resetData = () => {
     setData(dataKosong);
@@ -63,9 +68,18 @@ const Contact = (props) => {
     if (errName !== "" || errEmail !== "" || errPhone !== "" || errNat !== "") {
       return alert("Terdapat data yang tidak sesuai");
     } else {
+      const newData = {
+        nama: data.nama,
+        email: data.email,
+        phone: data.phone,
+        nationality: data.nationality,
+        message: data.message,
+      };
+      dispatch(submit(newData));
       alert(`Form anda berhasil diterima`);
       props.history.push("/review");
     }
+
     resetData();
   };
 
@@ -99,7 +113,7 @@ const Contact = (props) => {
               />
               {errName !== "" ? (
                 <>
-                  <span>{errName}</span>
+                  <span className="errMsg">{errName}</span>
                   <br />
                 </>
               ) : null}
@@ -118,7 +132,7 @@ const Contact = (props) => {
               />
               {errEmail !== "" ? (
                 <>
-                  <span>{errEmail}</span>
+                  <span className="errMsg">{errEmail}</span>
                   <br />
                 </>
               ) : null}
@@ -139,7 +153,7 @@ const Contact = (props) => {
               />
               {errPhone !== "" ? (
                 <>
-                  <span>{errPhone}</span>
+                  <span className="errMsg">{errPhone}</span>
                   <br />
                 </>
               ) : null}
@@ -162,7 +176,7 @@ const Contact = (props) => {
               </select>
               {errNat !== "" ? (
                 <>
-                  <span>{errNat}</span>
+                  <span className="errMsg">{errNat}</span>
                   <br />
                 </>
               ) : null}

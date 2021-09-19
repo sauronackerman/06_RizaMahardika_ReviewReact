@@ -1,12 +1,12 @@
-import { Fragment } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
-
-const Review = (props) => {
-  // const { name, email, phonenumber, nationality } = props.contacts;
+import { useSelector } from "react-redux";
+const Review = () => {
+  const value = useSelector((state) => state.user.value);
 
   return (
-    <Fragment>
+    <>
       <div className="body-review">
         <div className="container-review">
           <div className="img-box">
@@ -18,32 +18,32 @@ const Review = (props) => {
                       <tr>
                         <td className="td-t">Full Name</td>
                         <td>:</td>
-                        <td className="transf">&nbsp;name</td>
+                        <td className="transf">&nbsp;{value.nama}</td>
                       </tr>
                       <tr>
                         <td className="td-t">Email Address</td>
                         <td>:</td>
-                        <td>&nbsp;email</td>
+                        <td>&nbsp;{value.email}</td>
                       </tr>
                       <tr>
                         <td className="td-t">Phone Number</td>
                         <td>:</td>
-                        <td>&nbsp;phonenumber</td>
+                        <td>&nbsp;{value.phone}</td>
                       </tr>
                       <tr>
                         <td className="td-t">Nationality</td>
                         <td>:</td>
-                        <td>&nbsp;nationality</td>
+                        <td>&nbsp;{value.nationality}</td>
                       </tr>
                     </tbody>
                   </table>
                 </section>
                 <section className="sapaan">
                   <p>
-                    Hi <span className="transf">name </span>, I’m Mike from
-                    Monsters, Inc. I’ve seen your previous project and it was
-                    really amazing. And as you know our company are planning to
-                    build new mobile application. I hope you can join us to
+                    Hi <span className="transf">{value.nama}</span>, I’m Mike
+                    from Monsters, Inc. I’ve seen your previous project and it
+                    was really amazing. And as you know our company are planning
+                    to build new mobile application. I hope you can join us to
                     develope this application. We look forward to hearing from
                     you and hope you’ll join our project!
                   </p>
@@ -77,7 +77,7 @@ const Review = (props) => {
           </div>
         </div>
       </div>
-    </Fragment>
+    </>
   );
 };
 

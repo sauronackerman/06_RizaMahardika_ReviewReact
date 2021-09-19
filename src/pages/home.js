@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   const [jam, setJam] = useState(new Date());
+
   useEffect(() => {
     let timer = setInterval(() => detik(), 1000);
     return () => {
@@ -52,7 +53,11 @@ const Home = () => {
                 borderRadius: 10,
                 textAlign: "center",
                 display: "block",
+                color: "#19345e",
+                fontSize: 18,
               }}
+              data-testid="jamtest"
+              value={jam}
             >
               {jam.toLocaleTimeString()}
             </span>
@@ -72,12 +77,14 @@ const Home = () => {
               to="/contact"
               type="button"
               className="btn-costum rounded-pill"
+              name="getintouch"
             >
               Get in touch
             </Link>
             <Link
               to="/news"
               type="button"
+              name="btnnews"
               style={{ marginLeft: 4 }}
               className="btn-costum rounded-pill"
             >
